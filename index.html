@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="ico.ico">
+  <title>Lista Empresas</title>
+  <meta name="description" content="Lista Empresas Juazeiro do Norte - CE">
+  <meta name="keywords" content="Desenvolvido por ArsenalSystem">
+  <meta name="author" content="Rogoberto Ribeiro">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="">Lista de Pagadores</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table " id="idnew">
+              <thead>
+                <tr>
+                  <th>Cod</th>
+                  <th>Nome</th>
+                  <th>celular</th>
+                </tr>
+              </thead>
+              <tbody id="tabela">    
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $('#idnew').DataTable({
+        language: {
+            lengthMenu: 'Mostrar  _MENU_ Itens por página',
+            zeroRecords: 'Não encontrado - Vazio',
+            info: 'Mostrando pagina _PAGE_ de _PAGES_',
+            infoEmpty: 'Não tem itens',
+            infoFiltered: '(Total de  _MAX_ de itens)',
+        },
+    });
+});   
+</script>
